@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="portfolio.css">
+<!-- <script src="porfolio.js"></script> -->
+  <title>EMEPROR PORTFOLIO</title>
+  <!----the script below is for the icon in my service section from fontawesome.com website -->
+  <script src="https://kit.fontawesome.com/15c72f4a7c.js" crossorigin="anonymous"></script>
+  <style>
+
+  /*I'm a Text Effect*/
+    .effect { 
+      font-size: 30px;
+    }
+  
+    .effect span{
+  position: relative;
+    }
+  
+    .effect span::before{
+      content: 'Developer';
+      color: #ff004f;
+      animation: words 20s infinite;
+    }
+  
+    .effect span::after{
+      content: '';
+      background-color: #ff004f;
+      position: absolute;
+      width: calc(100% + 8px);
+      height: 100%;
+      border-left: 2px solid #ff004f;
+      right: -8px;
+      animation: cursor .6s infinite, typing 20s steps(14) infinite;
+    }
+  
+  @keyframes cursor {
+    to {
+      border-left: 2px solid #2f3542;
+  
+    }
+  }
+  
+  @keyframes words{
+    0%,20% {
+      content: 'Developer';
+    }
+  
+    21%,40% {
+      content: 'UI/UX Designer';
+    }
+  
+    41%,60% {
+      content: 'Software Engineer';
+    }
+  
+    61%,80% {
+      content: 'Gamer';
+    }
+  
+    81%,100% {
+      content: 'Freelancer';
+    }
+  }
+  
+  @keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%{
+      width: 0;
+    }
+  
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+  width: calc(100% + 8px);
+    }
+  }
+  
+  </style>
+  
+</head>
+
+<body>
+<!----HOME SECTION-->
+  <div id="header">
+    <div class="container">
+    <nav>
+      <img src="IMAGES/logomain.png" alt="" class="logo"> <!--Used photop to resize the logo-->
+    
+      <ul id="sidemenu">   <!-- id used in js to to open and close menu in smaller screen -->
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Service</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        <!---menu close icon for small screen-->
+      </ul>
+
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i><!---menu icon for small screen-->
+    </nav>
+
+    <div class="header-text">
+      <p>Front-end Developer</p> <div class="effect">
+        I'm a <span></span>
+          </div>
+      <h1>Welcome, I'm <span>Alaezi</span> <br> James from Nigeria</h1>
+      <!--span is to change the color of only the content inside the span-->
+      <!--FROM LINE 12 TO 27 IS FOR THE HOME SECTION-->
+    </div>
+  </div>
+ </div>
+
+
+ <!----ABOUT SECTION-->
+ <div id="about">
+    <div class="container">
+      <div class="row about">
+          <div class="about-col-1">
+            <img src="IMAGES/user2.png" alt="">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p class="about-text">Hello there! I'm James Alaezi, and I am a passionate web developer with a knack for creating exceptional digital experiences. With 4 years of experience in the industry, I have honed my skills in front-end development, responsive design, and user interface optimization. I thrive on translating creative concepts into functional, user-friendly websites that not only engage but also deliver results. <br><br>My expertise lies in HTML, CSS, JavaScript. I am a detail-oriented professional who believes in staying up-to-date with the latest web technologies and trends. Collaborative by nature, I enjoy working with diverse teams to bring ideas to life and exceed client expectations. I am driven by the pursuit of excellence and always strive to deliver high-quality, robust web solutions that leave a lasting impact. Let's connect and discuss how I can make your web idea a REALITY!!!</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p> <!---two class name-->
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>Web Development</span><br>Web app development <br>HTML, CSS & JAVASCRIPT</li>
+                  <li><span>UI/UX</span><br>Designing Web/App Interface Environment <br>Figma, Webflow, Flutter </li>
+                  <li><span>Graphic Designer</span><br>Brand product Design <br>Photoshop, Adobe Illustrator, Canva etc</li>
+                  <li><span>FreeLancer</span><br>Project Services/Digital Marketing</li>
+                </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2021-2023</span><br>B.Sc Computer Science <br>Institut Superiruer Bilingue Libre Du Togo <br>Lome Togo</li>
+                <li><span>2017-2019</span><br>W.A.S.S.C.E CCertificte <br>B.T.C International School <br>Lome Togo</li>
+                <li><span>2013-2027</span><br>B.E.C.E CERTIFICATE <br>B.T.C International School <br>Lome Togo</li>
+              </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2021–till date</span><br> C.E.O <br>Emperor Tech Institute (E.P.I)</li>
+              <li><span>2020–2021</span><br>ASSISTANT I.T PERSONNEL<br >Emperor Tech Institute (E.P.I)</li>
+              <li><span>2019–2020</span><br>ELEMENTARY TEACHER <br>B.T.C Int'l School Lome Togo</li>
+              <li><span>2020–2021</span><br>SECONDARY SCHOOL TUTOR <br>B.T.C Int'l School Lome Togo</li>
+            </ul>
+        </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+ <!----SERVICES SECTION-->
+<div id="services">
+  <div class="container">
+   <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <!----this code below is for the icon from fontawesome.com, you should add it in the html where u want it to appear
+         -->
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+      <p> A skilled web designer with a passion for crafting visually appealing and user-friendly websites from responsive layouts to intuitive interfaces.</p>
+        <a href="#">Learn more</a>
+      </div>
+
+      <div>
+          <!----line 162
+         -->
+        <i class="fa-brands fa-uikit"></i>
+        <h2>UI/UX Design </h2>
+      <p>A skilled and creative UI/UX designer, passionate about crafting exceptional user experiences, with a keen eye for aesthetics and a deep understanding of user behavior,</p>
+        <a href="#">Learn more</a>
+      </div>
+
+      <div>
+        <!----line 162
+         -->
+        <i class="fa-brands fa-app-store-ios"></i>
+        <h2>Application Design</h2>
+      <p>A creative app designer, offering my services to bring your ideas to life, with a passion for user-centered design, crafting intuitive and visually appealing interfaces that enhance user experiences.</p>
+        <a href="#">Learn more</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+ <!----MY WORK SECTION -->
+
+ <div id="portfolio">
+    <div class="container">
+    <h1 class="sub-title"> My Project</h1>
+
+    <div class="work-list">
+      <div class="work"><img src="IMAGES/my work/weather app.jpg" alt="">
+        <div class="layer">
+          <h3>Weather Check Site</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorum laborum iusto dolor, tenetur rerum reiciendis.</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+
+        <div class="work"><img src="IMAGES/my work/weather app.jpg" alt="">
+          <div class="layer">
+            <h3>Personal Portfolio</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorum laborum iusto dolor, tenetur rerum reiciendis.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        
+          <div class="work"><img src="IMAGES/my work/weather app.jpg" alt="">
+            <div class="layer">
+              <h3>Restaurant Site</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus dolorum laborum iusto dolor, tenetur rerum reiciendis.</p>
+              <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+    </div>
+
+     <a href="" class="btn">See more</a>
+    </div>
+ </div>
+
+
+  <!----CONTACT ME SECTION-->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact</h1>
+        <p> <i class="fa-sharp fa-solid fa-paper-plane"></i>   jimmhagwu16@gmail.com</p> 
+        <p> <i class="fa-solid fa-square-phone"></i>+228 97 22 33 49/+228 70 36 86 27</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/jimmy.alaezi" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/JAlaezi" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/jimmyalaezi/" target="blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://linktr.ee/jimmyalaezi" target="_blank "><i class="fa-solid fa-link"></i></a>
+        </div> 
+
+
+             <!----the download attribute is used to download any file attached to the href -->
+        <a href="IMAGES/my cv.pdf.pdf" download class="btn btn2">Download CV </a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <!-- message sent succesful -->
+       <span id="msg"></span>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT SECTION -->
+  <div class="copyright">
+    <p>Copyright © Emperor. Made by EmTECH</p>
+  </div>
+</div>
+
+</body>
+
+
+
+
+<script>
+  // SCRIPT FOR ABOUT ME SECTION
+  var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    //to remove the active class name (skills)
+    for (tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    // to remove the content of the active class name (skills  content)
+    for (tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    //display the active color of skill link to other links
+    event.currentTarget.classList.add("active-link");
+  
+    //display the content of experience and education
+    document.getElementById(tabname).classList.add("active-tab")
+}   
+</script>
+
+
+<!-- SCRIPT OR MENU ICONS -->
+<script>//To hide and ope side menu in smaller or mobile screen
+  var sidemeu = document.getElementById("sidemenu");
+  
+  ///*it was at 0 and the side menu was showing in css file, then i changed it to -200 so it won't show, now this function makes sure that when the hambuger icon is clicked, the ul with id name "sidemenu shows cause it is right = 0"
+  function openmenu(){
+      sidemeu.style.right = "0";
+  }
+  //vice versa of the comment above
+  function closemenu(){
+      sidemeu.style.right = "-200px";
+  }
+   </script>
+
+
+<!-- SCRIPT GOOGLE FORM -->
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyfVSOUiTeXBj70T2lyT-IfqoSqCDWY942U7pzJu77dlQJicAiKasXJ6836Ca_96vBb9Q/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  //message sent successfully displays only when submit is clicked
+const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</html>
